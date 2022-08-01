@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <div id="geral">
+        <input type="number" name="divisor" id="divisor" placeholder="Digite o Divisor">
+        <input type="button" value="Gerar Tabuada" onclick="calcula()">
+        <input type="button" value="Limpar" onclick="limpa()">
+        <div id="res">
+            Resultado
+        </div>
+
+    </div> 
+
+    <script>
+            
+            
+        function calcula() {
+            
+            var divisor = document.getElementById('divisor')
+            var res = document.getElementById('res')
+            var divisor = Number(divisor.value)
+
+
+            for (var dividendo = 0; dividendo <=10; dividendo++) {
+            res.innerHTML += `<p>${dividendo} x ${divisor} = ${dividendo*divisor}</P>`
+        }
+        }
+
+        function limpa() {
+            location.reload();
+        }   
+
+    </script>
+    
+</body>
+</html>
