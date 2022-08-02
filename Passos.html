@@ -36,27 +36,71 @@
 </style>
 <body>
     <header>
-        <h1>Passo a Passo</h1>
+        <h1>Vamos contar</h1>
     </header>
 
     <section>
        
         <div>
-            
+            <p>Inicio: <input type="number" name="inicio" id="inicio"></p>
+            <p>Fim: <input type="number" name="fim" id="fim"></p>
+            <p>Passo: <input type="number" name="passo" id="passo"></p>
+            <input type="button" value="Contar" onclick="contar()">       
         </div>
 
-        <div>
-            
+        <div id="res">
+           
         </div>
 
     </section>
 
     <footer>
         <p>Estudos</p>
-
     </footer>
 
     <script>
+        function contar() {
+            var ini = document.getElementById("inicio");
+            var fim = document.getElementById("fim");
+            var passo = document.getElementById("passo");
+            var resultado = document.getElementById("res");
+            
+           
+
+            if (ini.value.length ==0 || fim.value.length ==0 || passo.value.length ==0) {
+                window.alert("Error: Faltam Dados")
+            } else {
+
+                res.innerHTML = "Contando:"
+
+            var inicio = Number(ini.value)
+            var fim = Number(fim.value)
+            var passo = Number(passo.value)
+
+            if (inicio < fim) {
+
+            for (var c = inicio; c <= fim; c += passo) {
+                res.innerHTML += `${c} \u{1F449}`;
+            }
+            } else {
+
+                for (var c =inicio; c >= fim; c -= passo) {
+                    res.innerHTML += `${c} \u{1F449}`;
+
+            }
+        }
+
+            res.innerHTML += ` \u{1F3C1}`
+
+       
+    
+
+            }
+        }
+
+            
+
+        
 
     </script>
     
