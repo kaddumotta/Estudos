@@ -93,6 +93,11 @@
         text-align: center;
     }
 
+    #res_nome, #res_email, #res_telefone, #res_msg {
+        font-size: 10px;
+        color: red;
+    }
+
 </style>
 
 <body>
@@ -105,15 +110,32 @@
         <div id="form">
             <h1 id="titulo">Formulário de Cadastro</h1>
             <br>
-            <h3>Preencha os campos abaixo:</h3> <br>
+            <h4>Preencha os campos abaixo:</h4> <br>
+
+            
             <p id="inome">Nome Completo</p>
             <p><input type="text" name="nome" SIZE = 38 id="nome"></p>
+            <p id="res_nome"></p>
+               
+
+            
             <p id="iemail">E-mail</p>
             <p><input type="email" name="email" size="38" id="email"></p>
+            <p id="res_email"></p>
+            
+
+            
             <p id="itelefone">Telefone</p>
             <p><input type="tel" name="telefone" size="20" placeholder=" Ex: (DDD) 9.9999-9999" id="telefone"></p>
-            <p>Mensagem</p>
+            <p id="res_telefone"></p>
+            
+
+            
+            <p id="imsg">Mensagem</p>
             <p><textarea name="mensagem" id="msg" cols="40" rows="6"></textarea></p>
+            <p id="res_msg"></p>
+            
+
             <input id="botao" type="button" value="Enviar" onclick="enviar()">
             
         </div>
@@ -134,11 +156,12 @@
         var nome = document.getElementById("nome")
         var email = document.getElementById("email")
         var telefone = document.getElementById("telefone")
+        var msg = document.getElementById("msg")
 
         function enviar() {
 
             /* validação com alerta*/
-        if (nome.value == "" || email.value == "" || telefone.value == "") {
+        if (nome.value == "" || email.value == "" || telefone.value == "" || msg.value == "") {
             alert('Verifique os dados por favor!')
            
 
@@ -151,40 +174,68 @@
         if (nome.value == "") {
            
             document.getElementById('inome').style.color = 'red';
-            document.getElementById('inome').style.backgroundColor = 'rgb(236, 206, 198)';
+            document.getElementById('nome').style.backgroundColor = 'rgb(236, 206, 198)';
             document.getElementById('inome').style.fontWeight = 'bold';
+            res_nome.innerHTML = `❌ Preencha o campo`;
+            
+            
+            
 
 
         } else {
             document.getElementById('inome').style.color = 'green';
-            document.getElementById('inome').style.backgroundColor = 'white';
+            document.getElementById('nome').style.backgroundColor = 'rgb(190, 235, 190)';
             document.getElementById('inome').style.fontWeight = 'bold';
+            res_nome.innerHTML = ``;
         }
 
         if (email.value == "") {
            
            document.getElementById('iemail').style.color = 'red';
-           document.getElementById('iemail').style.backgroundColor = 'rgb(236, 206, 198)';
+           document.getElementById('email').style.backgroundColor = 'rgb(236, 206, 198)';
            document.getElementById('iemail').style.fontWeight = 'bold';
+           res_email.innerHTML = `❌ Preencha o campo`;
+           
 
 
        } else {
            document.getElementById('iemail').style.color = 'green';
-           document.getElementById('iemail').style.backgroundColor = 'white';
+           document.getElementById('email').style.backgroundColor = 'rgb(190, 235, 190)';
            document.getElementById('iemail').style.fontWeight = 'bold';
+           res_email.innerHTML = ``;
        }
 
        if (telefone.value == "") {
            
            document.getElementById('itelefone').style.color = 'red';
-           document.getElementById('itelefone').style.backgroundColor = 'rgb(236, 206, 198)';
+           document.getElementById('telefone').style.backgroundColor = 'rgb(236, 206, 198)';
            document.getElementById('itelefone').style.fontWeight = 'bold';
+           res_telefone.innerHTML = `❌ Preencha o campo`;
+       
 
 
        } else {
            document.getElementById('itelefone').style.color = 'green';
-           document.getElementById('itelefone').style.backgroundColor = 'white';
+           document.getElementById('telefone').style.backgroundColor = 'rgb(190, 235, 190)';
            document.getElementById('itelefone').style.fontWeight = 'bold';
+           res_telefone.innerHTML = ``;
+       }
+       
+       if (msg.value == "") {
+           
+           document.getElementById('imsg').style.color = 'red';
+           document.getElementById('msg').style.backgroundColor = 'rgb(236, 206, 198)';
+           document.getElementById('imsg').style.fontWeight = 'bold';
+           res_msg.innerHTML = `❌ Preencha o campo`;
+         
+           
+
+
+       } else {
+           document.getElementById('imsg').style.color = 'green';
+           document.getElementById('msg').style.backgroundColor = 'rgb(190, 235, 190)';
+           document.getElementById('imsg').style.fontWeight = 'bold';
+           res_msg.innerHTML = ``;
        }
 
     }
