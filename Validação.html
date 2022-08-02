@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passo a Passo</title>
+</head>
+
+<style>
+    body{
+        background: rgb(190, 235, 190);
+        font: normal 12pt Arial;
+        
+    }
+
+    header{
+        color: white;
+        text-align: center;
+    }
+
+    section{
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+      
+    }
+
+    footer{
+        color: white;
+        text-align: center;
+        font-style: italic;
+        font-weight: ;
+    }
+
+</style>
+<body>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+
+    <section>
+       
+        <div>
+            <p id="inome">Nome Completo</p>
+            <p><input type="text" name="nome" SIZE = 50 id="nome"></p>
+            <p id="iemail">E-mail</p>
+            <p><input type="email" name="email" size="50" id="email"></p>
+            <p id="itelefone">Telefone</p>
+            <p><input type="tel" name="telefone" size="20" placeholder=" Ex: (DDD) 9.9999-9999" id="telefone"></p>
+            <p>Mensagem</p>
+            <p><textarea name="mensagem" id="msg" cols="63" rows="10"></textarea></p>
+            <p><input type="button" value="Enviar" onclick="enviar()"></p>
+            
+        </div>
+
+        <div>
+            
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Estudos</p>
+
+    </footer>
+
+    <script>
+       
+        var nome = document.getElementById("nome")
+        var email = document.getElementById("email")
+        var telefone = document.getElementById("telefone")
+
+        function enviar() {
+
+            /* validação com alerta*/
+        if (nome.value == "" || email.value == "" || telefone.value == "") {
+            alert('Verifique os dados por favor!')
+           
+
+        } else {
+            alert('Enviado')
+        } 
+
+         /* validação com alteração CSS*/
+
+        if (nome.value == "") {
+           
+            document.getElementById('inome').style.color = 'red';
+            document.getElementById('inome').style.backgroundColor = 'rgb(236, 206, 198)';
+            document.getElementById('inome').style.fontWeight = 'bold';
+
+
+        } else {
+            document.getElementById('inome').style.color = 'green';
+            document.getElementById('inome').style.backgroundColor = 'white';
+            document.getElementById('inome').style.fontWeight = 'bold';
+        }
+
+        if (email.value == "") {
+           
+           document.getElementById('iemail').style.color = 'red';
+           document.getElementById('iemail').style.backgroundColor = 'rgb(236, 206, 198)';
+           document.getElementById('iemail').style.fontWeight = 'bold';
+
+
+       } else {
+           document.getElementById('iemail').style.color = 'green';
+           document.getElementById('iemail').style.backgroundColor = 'white';
+           document.getElementById('iemail').style.fontWeight = 'bold';
+       }
+
+       if (telefone.value == "") {
+           
+           document.getElementById('itelefone').style.color = 'red';
+           document.getElementById('itelefone').style.backgroundColor = 'rgb(236, 206, 198)';
+           document.getElementById('itelefone').style.fontWeight = 'bold';
+
+
+       } else {
+           document.getElementById('itelefone').style.color = 'green';
+           document.getElementById('itelefone').style.backgroundColor = 'white';
+           document.getElementById('itelefone').style.fontWeight = 'bold';
+       }
+
+    }
+    </script>
+    
+</body>
+</html>
