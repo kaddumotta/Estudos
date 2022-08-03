@@ -98,6 +98,8 @@
         color: red;
     }
 
+   
+
 </style>
 
 <body>
@@ -112,12 +114,11 @@
             <br>
             <h4>Preencha os campos abaixo:</h4> <br>
 
-            
+            <div id="case_error_name">
             <p id="inome">Nome Completo</p>
             <p><input type="text" name="nome" SIZE = 38 id="nome"></p>
             <p id="res_nome"></p>
-               
-
+            </div>
             
             <p id="iemail">E-mail</p>
             <p><input type="email" name="email" size="38" id="email"></p>
@@ -177,10 +178,8 @@
             document.getElementById('nome').style.backgroundColor = 'rgb(236, 206, 198)';
             document.getElementById('inome').style.fontWeight = 'bold';
             res_nome.innerHTML = `❌ Preencha o campo`;
+                       
             
-            
-            
-
 
         } else {
             document.getElementById('inome').style.color = 'green';
@@ -228,8 +227,6 @@
            document.getElementById('imsg').style.fontWeight = 'bold';
            res_msg.innerHTML = `❌ Preencha o campo`;
          
-           
-
 
        } else {
            document.getElementById('imsg').style.color = 'green';
