@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+
+<style>
+    
+    body{
+        background: rgb(190, 235, 190);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+    }
+
+    header{
+        color: rgba(51, 49, 49, 0.651);
+        text-align: center;
+        font-size: 25px;
+    }
+
+    section{
+        background: rgba(255, 255, 255, 0.747);
+        border-radius: 10px;
+        padding: 15px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+    }
+
+    footer{
+        color: rgba(78, 75, 75, 0.548);
+        text-align: center;
+        font-style: italic;
+        
+    }
+
+    #botao {
+        margin-left: 38%;
+        margin-top: 2px;
+        background: rgb(190, 235, 190);
+        padding: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        color: rgba(78, 75, 75, 0.548);
+    }
+
+    #botao:hover {
+        margin-left: 38%;   
+        background: rgb(190, 235, 190);
+        padding: 22px;
+        margin-top: -2px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: 5px 5px  rgba(0, 0, 0, 0.356);
+        transition: 0.6s;
+        color: rgb(51, 49, 49)
+    }
+
+    input {
+
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        
+    }
+
+    #msg {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+
+    #form {
+        padding-top: 15px;
+    }
+
+    #nome, #email , #senha, #msg {
+        box-shadow: 2px 2px  rgba(0, 0, 0, 0.356);
+        border-radius: 5px;
+        border: solid 1px;
+        border-color: rgba(128, 128, 128, 0.233);
+        padding: 5px;
+    }
+
+    #titulo {
+        text-align: center;
+    }
+
+    #res_nome, #res_email, #res_telefone, #res_msg {
+        font-size: 10px;
+        color: red;
+    }
+
+   
+
+</style>
+
+<body>
+    <header>
+        <h1>Seu site aqui</h1>
+    </header>
+
+    <section>
+       
+        <div id="form">
+            <h1 id="titulo">Formulário de Cadastro</h1>
+            <br>
+            <h4>Preencha os campos abaixo:</h4> <br>
+
+            <div id="case_error_name">
+            <p id="inome">Nome Completo</p>
+            <p><input type="text" name="nome" SIZE = 38 id="nome"></p>
+            <p id="res_nome"></p>
+            </div>
+            
+            <p id="iemail">E-mail</p>
+            <p><input type="email" name="email" size="38" id="email"></p>
+            <p id="res_email"></p>
+            
+            <p id="isenha">Senha</p>
+            <p><input type="text" name="senha" size="38" id="senha"></p>
+            <p id="res_senha"></p>
+            
+
+            <input id="botao" type="button" value="Cadastrar" onclick="enviar()">
+            
+        </div>
+
+        <div>
+          
+        </div>
+       
+    </section>
+
+    <footer>
+        <p>Estudos</p>
+
+    </footer>
+
+    <script>
+       
+        var nome = document.getElementById("nome")
+        var email = document.getElementById("email")
+        var senha = document.getElementById("senha")
+        
+
+        function enviar() {
+
+            /* validação com alerta*/
+        if (nome.value == "" || email.value == "" || senha.value == "") {
+            alert('Verifique os dados por favor!')
+           
+
+        } else {
+            alert('Enviado')
+        } 
+
+         /* validação com alteração CSS*/
+
+        if (nome.value == "") {
+           
+            document.getElementById('inome').style.color = 'red';
+            document.getElementById('nome').style.backgroundColor = 'rgb(236, 206, 198)';
+            document.getElementById('inome').style.fontWeight = 'bold';
+            res_nome.innerHTML = `❌ Preencha o campo`;
+                       
+            
+
+        } else {
+            document.getElementById('inome').style.color = 'green';
+            document.getElementById('nome').style.backgroundColor = 'rgb(190, 235, 190)';
+            document.getElementById('inome').style.fontWeight = 'bold';
+            res_nome.innerHTML = ``;
+        }
+
+        if (email.value == "") {
+           
+           document.getElementById('iemail').style.color = 'red';
+           document.getElementById('email').style.backgroundColor = 'rgb(236, 206, 198)';
+           document.getElementById('iemail').style.fontWeight = 'bold';
+           res_email.innerHTML = `❌ Preencha o campo`;
+           
+
+
+       } else {
+           document.getElementById('iemail').style.color = 'green';
+           document.getElementById('email').style.backgroundColor = 'rgb(190, 235, 190)';
+           document.getElementById('iemail').style.fontWeight = 'bold';
+           res_email.innerHTML = ``;
+       }
+
+       if (senha.value == "") {
+           
+           document.getElementById('isenha').style.color = 'red';
+           document.getElementById('senha').style.backgroundColor = 'rgb(236, 206, 198)';
+           document.getElementById('isenha').style.fontWeight = 'bold';
+           res_senha.innerHTML = `❌ Preencha o campo`;
+       
+
+
+       } else {
+           document.getElementById('isenha').style.color = 'green';
+           document.getElementById('senha').style.backgroundColor = 'rgb(190, 235, 190)';
+           document.getElementById('isenha').style.fontWeight = 'bold';
+           res_senha.innerHTML = ``;
+       }
+       
+    }
+
+    
+
+    </script>
+    
+</body>
+</html>
