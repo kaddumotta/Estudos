@@ -9,86 +9,147 @@
 
 <style>
 
+    body {
+        background-color: rgba(128, 114, 114, 0.61);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+    }
+
+#principal {
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
 
 #tentativas {
+    text-align: center;
+    
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
     padding: 2px;
     
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.226);
+    border-radius: 15px;
+    text-align: center;
 }
+
 
 #botao {
+   margin-left: 48%;
+   margin-right: 50%;
+   padding: 5px;
+   color: rgb(15, 9, 9);
+   background-color: rgba(128, 114, 114, 0.61);
+   border: none;
+   border-radius: 5px;
+   font-size: 15px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+   box-shadow: none;  
    
-    
 }
 
-input{
-  border:  solid 3px black;
+#botao:hover {
+   
+   padding: 5px;
+   color: white;
+   background-color: rgba(90, 81, 81, 0.897) ;
+   font-size: 15px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   box-shadow: 5px 5px rgba(0, 0, 0, 0.288);
+   transition: 0.8s;
+   ;
+
 }
+
+
+input{
+  border:  solid 3px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.247);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  margin: 5px;
+  color: rgba(90, 81, 81, 0.897) ;
+  font-weight: bold;
+  
+  
+
+}
+
 
 </style>
 
+
 <body>
-    <header>Descubra a Palavra</header>
+     <h1>Digite a Palavra</h1>
 
     <div id="principal">
-        <h1>Digite a Palavra</h1>
+
+        
+
 
         <div id="tentativas">
-            <input type="text" name="letra1" size="1" id="1letra1">
-            <input type="text" name="letra2" size="1" id="1letra2">
-            <input type="text" name="letra3" size="1" id="1letra3">
-            <input type="text" name="letra4" size="1" id="1letra4">
-            <input type="text" name="letra5" size="1" id="1letra5">
+            <input type="text" name="letra1" size="1" maxlength="1"  id="1letra1">
+            <input type="text" name="letra2" size="1" maxlength="1"  id="1letra2">
+            <input type="text" name="letra3" size="1" maxlength="1"  id="1letra3">
+            <input type="text" name="letra4" size="1" maxlength="1"  id="1letra4">
+            <input type="text" name="letra5" size="1" maxlength="1"  id="1letra5">
         </div>
 
         <div id="tentativas">
-            <input type="text" name="letra1" size="1" id="2letra1">
-            <input type="text" name="letra2" size="1" id="2letra2">
-            <input type="text" name="letra3" size="1" id="2letra3">
-            <input type="text" name="letra4" size="1" id="2letra4">
-            <input type="text" name="letra5" size="1" id="2letra5">
+            <input type="text" name="letra1" size="1" maxlength="1" id="2letra1">
+            <input type="text" name="letra2" size="1" maxlength="1" id="2letra2">
+            <input type="text" name="letra3" size="1" maxlength="1" id="2letra3">
+            <input type="text" name="letra4" size="1" maxlength="1" id="2letra4">
+            <input type="text" name="letra5" size="1" maxlength="1" id="2letra5">
         </div>
 
         <div id="tentativas"> 
-            <input type="text" name="letra1" size="1" id="3letra1">
-            <input type="text" name="letra2" size="1" id="3letra2">
-            <input type="text" name="letra3" size="1" id="3letra3">
-            <input type="text" name="letra4" size="1" id="3letra4">
-            <input type="text" name="letra5" size="1" id="3letra5">
+            <input type="text" name="letra1" size="1" maxlength="1"  id="3letra1">
+            <input type="text" name="letra2" size="1" maxlength="1"  id="3letra2">
+            <input type="text" name="letra3" size="1" maxlength="1"  id="3letra3">
+            <input type="text" name="letra4" size="1" maxlength="1"  id="3letra4">
+            <input type="text" name="letra5" size="1" maxlength="1"  id="3letra5">
         </div>
 
         <div id="tentativas">
-            <input type="text" name="letra1" size="1" id="4letra1">
-            <input type="text" name="letra2" size="1" id="4letra2">
-            <input type="text" name="letra3" size="1" id="4letra3">
-            <input type="text" name="letra4" size="1" id="4letra4">
-            <input type="text" name="letra5" size="1" id="4letra5">
+            <input type="text" name="letra1" size="1" maxlength="1"  id="4letra1">
+            <input type="text" name="letra2" size="1" maxlength="1"  id="4letra2">
+            <input type="text" name="letra3" size="1" maxlength="1"  id="4letra3">
+            <input type="text" name="letra4" size="1" maxlength="1"  id="4letra4">
+            <input type="text" name="letra5" size="1" maxlength="1"  id="4letra5">
         </div>
 
         <div id="tentativas">
-            <input type="text" name="letra1" size="1" id="5letra1">
-            <input type="text" name="letra2" size="1" id="5letra2">
-            <input type="text" name="letra3" size="1" id="5letra3">
-            <input type="text" name="letra4" size="1" id="5letra4">
-            <input type="text" name="letra5" size="1" id="5letra5">
+            <input type="text" name="letra1" size="1" maxlength="1"  id="5letra1">
+            <input type="text" name="letra2" size="1" maxlength="1"  id="5letra2">
+            <input type="text" name="letra3" size="1" maxlength="1"  id="5letra3">
+            <input type="text" name="letra4" size="1" maxlength="1"  id="5letra4">
+            <input type="text" name="letra5" size="1" maxlength="1"  id="5letra5">
         </div>
 
-        <input id="botao" type="button" value="Verificar" onclick="verifica()">
-
-
-    </div>   
+    </div> 
+    
+    <input id="botao" type="button" value="Verificar" onclick="verifica()">
     
     
     
     <script>
 
         /*PALAVRA DO DIA*/
-        var letra1 = "L"
+        var letra1 = "T"
         let letra2 = "U"
-        let letra3 = "T"
-        let letra4 = "A"
-        let letra5 = "R"
+        let letra3 = "M"
+        let letra4 = "B"
+        let letra5 = "A"
 
-         /*PALAVRA DIGITADA*/
+
+        /*PALAVRA DIGITADA*/
         var letr1t1 = document.getElementById("1letra1")
         
         var letr2t1 = document.getElementById("1letra2")
@@ -131,11 +192,11 @@ input{
 
             if (letr1t1.value === "") {
             
-               document.getElementById('1letra1').style.border = 'solid 3px black';
+               document.getElementById('1letra1').style.border = 'solid 3px transparent';
 
             } else if (letra1 == letr1t1.value) {
                 
-                document.getElementById('1letra1').style.border = 'solid 3px green';
+                document.getElementById('1letra1').style.border = 'solid 3px green ';
 
             } else if (letra1 != letr1t1.value && letra2 == letr1t1.value || letra3 == letr1t1.value || letra4 == letr1t1.value || letra5 == letr1t1.value) {
                 
@@ -147,7 +208,7 @@ input{
         
             if (letr2t1.value === "") {
             
-            document.getElementById('1letra2').style.border = 'solid 3px black';
+            document.getElementById('1letra2').style.border = 'solid 3px transparent';
 
          } else if (letra2 == letr2t1.value) {
                 
@@ -162,7 +223,7 @@ input{
 
             if (letr3t1.value === "") {
             
-            document.getElementById('1letra3').style.border = 'solid 3px black';
+            document.getElementById('1letra3').style.border = 'solid 3px transparent';
 
          } else if (letra3 == letr3t1.value) {
                 
@@ -178,7 +239,7 @@ input{
 
             if (letr4t1.value === "") {
             
-            document.getElementById('1letra4').style.border = 'solid 3px black';
+            document.getElementById('1letra4').style.border = 'solid 3px transparent';
 
          } else if (letra4 == letr4t1.value) {
                 
@@ -194,7 +255,7 @@ input{
 
             if (letr5t1.value === "") {
             
-            document.getElementById('1letra5').style.border = 'solid 3px black';
+            document.getElementById('1letra5').style.border = 'solid 3px transparent';
 
          } else if (letra5 == letr5t1.value) {
                 
@@ -212,7 +273,7 @@ input{
 
             if (letr1t2.value === "") {
             
-            document.getElementById('2letra1').style.border = 'solid 3px black';
+            document.getElementById('2letra1').style.border = 'solid 3px transparent';
 
          } else if (letra1 == letr1t2.value) {
                 
@@ -228,7 +289,7 @@ input{
             
             if (letr2t2.value === "") {
             
-            document.getElementById('2letra2').style.border = 'solid 3px black';
+            document.getElementById('2letra2').style.border = 'solid 3px transparent';
 
          } else if (letra2 == letr2t2.value) {
                 
@@ -245,7 +306,7 @@ input{
 
             if (letr3t2.value === "") {
             
-            document.getElementById('2letra3').style.border = 'solid 3px black';
+            document.getElementById('2letra3').style.border = 'solid 3px transparent';
 
          } else if (letra3 == letr3t2.value) {
                 
@@ -261,7 +322,7 @@ input{
 
             if (letr4t2.value === "") {
             
-            document.getElementById('2letra4').style.border = 'solid 3px black';
+            document.getElementById('2letra4').style.border = 'solid 3px transparent';
 
          } else if (letra4 == letr4t2.value) {
                 
@@ -278,7 +339,7 @@ input{
 
             if (letr5t2.value === "") {
             
-            document.getElementById('2letra5').style.border = 'solid 3px black';
+            document.getElementById('2letra5').style.border = 'solid 3px transparent';
 
          } else if (letra5 == letr5t2.value) {
                 
@@ -297,7 +358,7 @@ input{
 
             if (letr1t3.value === "") {
             
-            document.getElementById('3letra1').style.border = 'solid 3px black';
+            document.getElementById('3letra1').style.border = 'solid 3px transparent';
 
          } else if (letra1 == letr1t3.value) {
              
@@ -313,7 +374,7 @@ input{
      
          if (letr2t3.value === "") {
          
-         document.getElementById('3letra2').style.border = 'solid 3px black';
+         document.getElementById('3letra2').style.border = 'solid 3px transparent';
 
       } else if (letra2 == letr2t3.value) {
              
@@ -328,7 +389,7 @@ input{
 
          if (letr3t3.value === "") {
          
-         document.getElementById('3letra3').style.border = 'solid 3px black';
+         document.getElementById('3letra3').style.border = 'solid 3px transparent';
 
       } else if (letra3 == letr3t3.value) {
              
@@ -344,7 +405,7 @@ input{
 
          if (letr4t3.value === "") {
          
-         document.getElementById('3letra4').style.border = 'solid 3px black';
+         document.getElementById('3letra4').style.border = 'solid 3px transparent';
 
       } else if (letra4 == letr4t3.value) {
              
@@ -360,7 +421,7 @@ input{
 
          if (letr5t3.value === "") {
          
-         document.getElementById('3letra5').style.border = 'solid 3px black';
+         document.getElementById('3letra5').style.border = 'solid 3px transparent';
 
       } else if (letra5 == letr5t3.value) {
              
@@ -380,7 +441,7 @@ input{
 
           if (letr1t4.value === "") {
             
-            document.getElementById('4letra1').style.border = 'solid 3px black';
+            document.getElementById('4letra1').style.border = 'solid 3px transparent';
 
          } else if (letra1 == letr1t4.value) {
              
@@ -396,7 +457,7 @@ input{
      
          if (letr2t4.value === "") {
          
-         document.getElementById('4letra2').style.border = 'solid 3px black';
+         document.getElementById('4letra2').style.border = 'solid 3px transparent';
 
       } else if (letra2 == letr2t4.value) {
              
@@ -411,7 +472,7 @@ input{
 
          if (letr3t4.value === "") {
          
-         document.getElementById('4letra3').style.border = 'solid 3px black';
+         document.getElementById('4letra3').style.border = 'solid 3px transparent';
 
       } else if (letra3 == letr3t4.value) {
              
@@ -427,7 +488,7 @@ input{
 
          if (letr4t4.value === "") {
          
-         document.getElementById('4letra4').style.border = 'solid 3px black';
+         document.getElementById('4letra4').style.border = 'solid 3px transparent';
 
       } else if (letra4 == letr4t4.value) {
              
@@ -443,7 +504,7 @@ input{
 
          if (letr5t4.value === "") {
          
-         document.getElementById('4letra5').style.border = 'solid 3px black';
+         document.getElementById('4letra5').style.border = 'solid 3px transparent';
 
       } else if (letra5 == letr5t4.value) {
              
@@ -465,7 +526,7 @@ input{
 
          if (letr1t5.value === "") {
             
-            document.getElementById('5letra1').style.border = 'solid 3px black';
+            document.getElementById('5letra1').style.border = 'solid 3px transparent';
 
          } else if (letra1 == letr1t5.value) {
              
@@ -481,7 +542,7 @@ input{
      
          if (letr2t5.value === "") {
          
-         document.getElementById('5letra2').style.border = 'solid 3px black';
+         document.getElementById('5letra2').style.border = 'solid 3px transparent';
 
       } else if (letra2 == letr2t5.value) {
              
@@ -496,7 +557,7 @@ input{
 
          if (letr3t5.value === "") {
          
-         document.getElementById('5letra3').style.border = 'solid 3px black';
+         document.getElementById('5letra3').style.border = 'solid 3px transparent';
 
       } else if (letra3 == letr3t5.value) {
              
@@ -512,7 +573,7 @@ input{
 
          if (letr4t5.value === "") {
          
-         document.getElementById('5letra4').style.border = 'solid 3px black';
+         document.getElementById('5letra4').style.border = 'solid 3px transparent';
 
       } else if (letra4 == letr4t5.value) {
              
@@ -528,7 +589,7 @@ input{
 
          if (letr5t5.value === "") {
          
-         document.getElementById('5letra5').style.border = 'solid 3px black';
+         document.getElementById('5letra5').style.border = 'solid 3px transparent';
 
       } else if (letra5 == letr5t5.value) {
              
@@ -541,9 +602,6 @@ input{
              document.getElementById('5letra5').style.border = 'solid 3px red'; 
 
          }
-
-         
-
 
         }
          
