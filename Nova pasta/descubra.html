@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra a Palavra</title>
+</head>
+
+<style>
+
+
+#tentativas {
+    padding: 2px;
+    
+}
+
+#botao {
+   
+    
+}
+
+input{
+  border:  solid 3px black;
+}
+
+</style>
+
+<body>
+    <header>Descubra a Palavra</header>
+
+    <div id="principal">
+        <h1>Digite a Palavra</h1>
+
+        <div id="tentativas">
+            <input type="text" name="letra1" size="1" id="1letra1">
+            <input type="text" name="letra2" size="1" id="1letra2">
+            <input type="text" name="letra3" size="1" id="1letra3">
+            <input type="text" name="letra4" size="1" id="1letra4">
+            <input type="text" name="letra5" size="1" id="1letra5">
+        </div>
+
+        <div id="tentativas">
+            <input type="text" name="letra1" size="1" id="2letra1">
+            <input type="text" name="letra2" size="1" id="2letra2">
+            <input type="text" name="letra3" size="1" id="2letra3">
+            <input type="text" name="letra4" size="1" id="2letra4">
+            <input type="text" name="letra5" size="1" id="2letra5">
+        </div>
+
+        <div id="tentativas"> 
+            <input type="text" name="letra1" size="1" id="3letra1">
+            <input type="text" name="letra2" size="1" id="3letra2">
+            <input type="text" name="letra3" size="1" id="3letra3">
+            <input type="text" name="letra4" size="1" id="3letra4">
+            <input type="text" name="letra5" size="1" id="3letra5">
+        </div>
+
+        <div id="tentativas">
+            <input type="text" name="letra1" size="1" id="4letra1">
+            <input type="text" name="letra2" size="1" id="4letra2">
+            <input type="text" name="letra3" size="1" id="4letra3">
+            <input type="text" name="letra4" size="1" id="4letra4">
+            <input type="text" name="letra5" size="1" id="4letra5">
+        </div>
+
+        <div id="tentativas">
+            <input type="text" name="letra1" size="1" id="5letra1">
+            <input type="text" name="letra2" size="1" id="5letra2">
+            <input type="text" name="letra3" size="1" id="5letra3">
+            <input type="text" name="letra4" size="1" id="5letra4">
+            <input type="text" name="letra5" size="1" id="5letra5">
+        </div>
+
+        <input id="botao" type="button" value="Verificar" onclick="verifica()">
+
+
+    </div>   
+    
+    
+    
+    <script>
+
+        /*PALAVRA DO DIA*/
+        var letra1 = "L"
+        let letra2 = "U"
+        let letra3 = "T"
+        let letra4 = "A"
+        let letra5 = "R"
+
+         /*PALAVRA DIGITADA*/
+        var letr1t1 = document.getElementById("1letra1")
+        
+        var letr2t1 = document.getElementById("1letra2")
+        var letr3t1 = document.getElementById("1letra3")
+        var letr4t1 = document.getElementById("1letra4")
+        var letr5t1 = document.getElementById("1letra5")
+
+        var letr1t2 = document.getElementById("2letra1")
+        var letr2t2 = document.getElementById("2letra2")
+        var letr3t2 = document.getElementById("2letra3")
+        var letr4t2 = document.getElementById("2letra4")
+        var letr5t2 = document.getElementById("2letra5")
+
+        var letr1t3 = document.getElementById("3letra1")
+        var letr2t3 = document.getElementById("3letra2")
+        var letr3t3 = document.getElementById("3letra3")
+        var letr4t3 = document.getElementById("3letra4")
+        var letr5t3 = document.getElementById("3letra5")
+
+        var letr1t4 = document.getElementById("4letra1")
+        var letr2t4 = document.getElementById("4letra2")
+        var letr3t4 = document.getElementById("4letra3")
+        var letr4t4 = document.getElementById("4letra4")
+        var letr5t4 = document.getElementById("4letra5")
+
+        var letr1t5 = document.getElementById("5letra1")
+        var letr2t5 = document.getElementById("5letra2")
+        var letr3t5 = document.getElementById("5letra3")
+        var letr4t5 = document.getElementById("5letra4")
+        var letr5t5 = document.getElementById("5letra5")
+
+
+
+      
+               
+        function verifica() {
+
+            /*1ª TENTATIVA*/
+            
+
+            if (letr1t1.value === "") {
+            
+               document.getElementById('1letra1').style.border = 'solid 3px black';
+
+            } else if (letra1 == letr1t1.value) {
+                
+                document.getElementById('1letra1').style.border = 'solid 3px green';
+
+            } else if (letra1 != letr1t1.value && letra2 == letr1t1.value || letra3 == letr1t1.value || letra4 == letr1t1.value || letra5 == letr1t1.value) {
+                
+                document.getElementById('1letra1').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('1letra1').style.border = 'solid 3px red';
+            }
+
+        
+            if (letr2t1.value === "") {
+            
+            document.getElementById('1letra2').style.border = 'solid 3px black';
+
+         } else if (letra2 == letr2t1.value) {
+                
+                document.getElementById('1letra2').style.border = 'solid 3px green';
+
+            } else if (letra2 != letr2t1.value && letra1 == letr2t1.value || letra3 == letr2t1.value || letra4 == letr2t1.value || letra5 == letr2t1.value) {
+                
+                document.getElementById('1letra2').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('1letra2').style.border = 'solid 3px red';
+            }
+
+            if (letr3t1.value === "") {
+            
+            document.getElementById('1letra3').style.border = 'solid 3px black';
+
+         } else if (letra3 == letr3t1.value) {
+                
+                document.getElementById('1letra3').style.border = 'solid 3px green';
+
+            } else if (letra3 != letr3t1.value && letra1 == letr3t1.value || letra2 == letr3t1.value || letra4 == letr3t1.value || letra5 == letr3t1.value) {
+                
+                document.getElementById('1letra3').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('1letra3').style.border = 'solid 3px red';
+            }
+
+
+            if (letr4t1.value === "") {
+            
+            document.getElementById('1letra4').style.border = 'solid 3px black';
+
+         } else if (letra4 == letr4t1.value) {
+                
+                document.getElementById('1letra4').style.border = 'solid 3px green';
+
+            } else if (letra4 != letr4t1.value && letra1 == letr4t1.value || letra2 == letr4t1.value || letra3 == letr4t1.value || letra5 == letr4t1.value) {
+                
+                document.getElementById('1letra4').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('1letra4').style.border = 'solid 3px red';
+            }
+
+
+            if (letr5t1.value === "") {
+            
+            document.getElementById('1letra5').style.border = 'solid 3px black';
+
+         } else if (letra5 == letr5t1.value) {
+                
+                document.getElementById('1letra5').style.border = 'solid 3px green';
+
+            } else if (letra5 != letr5t1.value && letra1 == letr5t1.value || letra2 == letr5t1.value || letra3 == letr5t1.value || letra4 == letr5t1.value) {
+                
+                document.getElementById('1letra5').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('1letra5').style.border = 'solid 3px red';
+            }
+
+
+            /*2ª tentativa*/
+
+            if (letr1t2.value === "") {
+            
+            document.getElementById('2letra1').style.border = 'solid 3px black';
+
+         } else if (letra1 == letr1t2.value) {
+                
+                document.getElementById('2letra1').style.border = 'solid 3px green';
+
+            } else if (letra1 != letr1t2.value && letra2 == letr1t2.value || letra3 == letr1t2.value || letra4 == letr1t2.value || letra5 == letr1t2.value) {
+                
+                document.getElementById('2letra1').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('2letra1').style.border = 'solid 3px red';
+            }
+
+            
+            if (letr2t2.value === "") {
+            
+            document.getElementById('2letra2').style.border = 'solid 3px black';
+
+         } else if (letra2 == letr2t2.value) {
+                
+                document.getElementById('2letra2').style.border = 'solid 3px green';
+
+            } else if (letra2 != letr2t2.value && letra1 == letr2t2.value || letra3 == letr2t2.value || letra4 == letr2t2.value || letra5 == letr2t2.value) {
+                
+                document.getElementById('2letra2').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('2letra2').style.border = 'solid 3px red';
+            }
+
+
+
+            if (letr3t2.value === "") {
+            
+            document.getElementById('2letra3').style.border = 'solid 3px black';
+
+         } else if (letra3 == letr3t2.value) {
+                
+                document.getElementById('2letra3').style.border = 'solid 3px green';
+
+            } else if (letra3 != letr3t2.value && letra1 == letr3t2.value || letra2 == letr3t2.value || letra4 == letr3t2.value || letra5 == letr3t2.value) {
+                
+                document.getElementById('2letra3').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('2letra3').style.border = 'solid 3px red';
+            }
+
+
+            if (letr4t2.value === "") {
+            
+            document.getElementById('2letra4').style.border = 'solid 3px black';
+
+         } else if (letra4 == letr4t2.value) {
+                
+                document.getElementById('2letra4').style.border = 'solid 3px green';
+
+            } else if (letra4 != letr4t2.value && letra1 == letr4t2.value || letra2 == letr4t2.value || letra3 == letr4t2.value || letra5 == letr4t2.value) {
+                
+                document.getElementById('2letra4').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('2letra4').style.border = 'solid 3px red';
+            }
+
+
+
+            if (letr5t2.value === "") {
+            
+            document.getElementById('2letra5').style.border = 'solid 3px black';
+
+         } else if (letra5 == letr5t2.value) {
+                
+                document.getElementById('2letra5').style.border = 'solid 3px green';
+
+            } else if (letra5 != letr5t2.value && letra1 == letr5t2.value || letra2 == letr5t2.value || letra3 == letr5t2.value || letra4 == letr5t2.value) {
+                
+                document.getElementById('2letra5').style.border = 'solid 3px orange';
+            } else {
+                document.getElementById('2letra5').style.border = 'solid 3px red';
+            }
+
+
+            /*3ª TENTATIVA*/
+            
+
+            if (letr1t3.value === "") {
+            
+            document.getElementById('3letra1').style.border = 'solid 3px black';
+
+         } else if (letra1 == letr1t3.value) {
+             
+             document.getElementById('3letra1').style.border = 'solid 3px green';
+
+         } else if (letra1 != letr1t3.value && letra2 == letr1t3.value || letra3 == letr1t3.value || letra4 == letr1t3.value || letra5 == letr1t3.value) {
+             
+             document.getElementById('3letra1').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('3letra1').style.border = 'solid 3px red';
+         }
+
+     
+         if (letr2t3.value === "") {
+         
+         document.getElementById('3letra2').style.border = 'solid 3px black';
+
+      } else if (letra2 == letr2t3.value) {
+             
+             document.getElementById('3letra2').style.border = 'solid 3px green';
+
+         } else if (letra2 != letr2t3.value && letra1 == letr2t3.value || letra3 == letr2t3.value || letra4 == letr2t3.value || letra5 == letr2t3.value) {
+             
+             document.getElementById('3letra2').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('3letra2').style.border = 'solid 3px red';
+         }
+
+         if (letr3t3.value === "") {
+         
+         document.getElementById('3letra3').style.border = 'solid 3px black';
+
+      } else if (letra3 == letr3t3.value) {
+             
+             document.getElementById('3letra3').style.border = 'solid 3px green';
+
+         } else if (letra3 != letr3t3.value && letra1 == letr3t3.value || letra2 == letr3t3.value || letra4 == letr3t3.value || letra5 == letr3t3.value) {
+             
+             document.getElementById('3letra3').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('3letra3').style.border = 'solid 3px red';
+         }
+
+
+         if (letr4t3.value === "") {
+         
+         document.getElementById('3letra4').style.border = 'solid 3px black';
+
+      } else if (letra4 == letr4t3.value) {
+             
+             document.getElementById('3letra4').style.border = 'solid 3px green';
+
+         } else if (letra4 != letr4t3.value && letra1 == letr4t3.value || letra2 == letr4t3.value || letra3 == letr4t3.value || letra5 == letr4t3.value) {
+             
+             document.getElementById('3letra4').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('3letra4').style.border = 'solid 3px red';
+         }
+
+
+         if (letr5t3.value === "") {
+         
+         document.getElementById('3letra5').style.border = 'solid 3px black';
+
+      } else if (letra5 == letr5t3.value) {
+             
+             document.getElementById('3letra5').style.border = 'solid 3px green';
+
+         } else if (letra5 != letr5t3.value && letra1 == letr5t3.value || letra2 == letr5t3.value || letra3 == letr5t3.value || letra4 == letr5t3.value) {
+             
+             document.getElementById('3letra5').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('3letra5').style.border = 'solid 3px red';
+         }
+
+
+
+          /*4ª TENTATIVA*/
+            
+
+          if (letr1t4.value === "") {
+            
+            document.getElementById('4letra1').style.border = 'solid 3px black';
+
+         } else if (letra1 == letr1t4.value) {
+             
+             document.getElementById('4letra1').style.border = 'solid 3px green';
+
+         } else if (letra1 != letr1t4.value && letra2 == letr1t4.value || letra3 == letr1t4.value || letra4 == letr1t4.value || letra5 == letr1t4.value) {
+             
+             document.getElementById('4letra1').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('4letra1').style.border = 'solid 3px red';
+         }
+
+     
+         if (letr2t4.value === "") {
+         
+         document.getElementById('4letra2').style.border = 'solid 3px black';
+
+      } else if (letra2 == letr2t4.value) {
+             
+             document.getElementById('4letra2').style.border = 'solid 3px green';
+
+         } else if (letra2 != letr2t4.value && letra1 == letr2t4.value || letra3 == letr2t4.value || letra4 == letr2t4.value || letra5 == letr2t4.value) {
+             
+             document.getElementById('4letra2').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('4letra2').style.border = 'solid 3px red';
+         }
+
+         if (letr3t4.value === "") {
+         
+         document.getElementById('4letra3').style.border = 'solid 3px black';
+
+      } else if (letra3 == letr3t4.value) {
+             
+             document.getElementById('4letra3').style.border = 'solid 3px green';
+
+         } else if (letra3 != letr3t4.value && letra1 == letr3t4.value || letra2 == letr3t4.value || letra4 == letr3t4.value || letra5 == letr3t4.value) {
+             
+             document.getElementById('4letra3').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('4letra3').style.border = 'solid 3px red';
+         }
+
+
+         if (letr4t4.value === "") {
+         
+         document.getElementById('4letra4').style.border = 'solid 3px black';
+
+      } else if (letra4 == letr4t4.value) {
+             
+             document.getElementById('4letra4').style.border = 'solid 3px green';
+
+         } else if (letra4 != letr4t4.value && letra1 == letr4t4.value || letra2 == letr4t4.value || letra3 == letr4t4.value || letra5 == letr4t4.value) {
+             
+             document.getElementById('4letra4').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('4letra4').style.border = 'solid 3px red';
+         }
+
+
+         if (letr5t4.value === "") {
+         
+         document.getElementById('4letra5').style.border = 'solid 3px black';
+
+      } else if (letra5 == letr5t4.value) {
+             
+             document.getElementById('4letra5').style.border = 'solid 3px green';
+
+         } else if (letra5 != letr5t4.value && letra1 == letr5t4.value || letra2 == letr5t4.value || letra3 == letr5t4.value || letra4 == letr5t4.value) {
+             
+             document.getElementById('4letra5').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('4letra5').style.border = 'solid 3px red';
+         }
+
+
+        
+
+
+         /*5ª TENTATIVA*/
+            
+
+         if (letr1t5.value === "") {
+            
+            document.getElementById('5letra1').style.border = 'solid 3px black';
+
+         } else if (letra1 == letr1t5.value) {
+             
+             document.getElementById('5letra1').style.border = 'solid 3px green';
+
+         } else if (letra1 != letr1t5.value && letra2 == letr1t5.value || letra3 == letr1t5.value || letra4 == letr1t5.value || letra5 == letr1t5.value) {
+             
+             document.getElementById('5letra1').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('5letra1').style.border = 'solid 3px red';
+         }
+
+     
+         if (letr2t5.value === "") {
+         
+         document.getElementById('5letra2').style.border = 'solid 3px black';
+
+      } else if (letra2 == letr2t5.value) {
+             
+             document.getElementById('5letra2').style.border = 'solid 3px green';
+
+         } else if (letra2 != letr2t5.value && letra1 == letr2t5.value || letra3 == letr2t5.value || letra4 == letr2t5.value || letra5 == letr2t5.value) {
+             
+             document.getElementById('5letra2').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('5letra2').style.border = 'solid 3px red';
+         }
+
+         if (letr3t5.value === "") {
+         
+         document.getElementById('5letra3').style.border = 'solid 3px black';
+
+      } else if (letra3 == letr3t5.value) {
+             
+             document.getElementById('5letra3').style.border = 'solid 3px green';
+
+         } else if (letra3 != letr3t5.value && letra1 == letr3t5.value || letra2 == letr3t5.value || letra4 == letr3t5.value || letra5 == letr3t5.value) {
+             
+             document.getElementById('5letra3').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('5letra3').style.border = 'solid 3px red';
+         }
+
+
+         if (letr4t5.value === "") {
+         
+         document.getElementById('5letra4').style.border = 'solid 3px black';
+
+      } else if (letra4 == letr4t5.value) {
+             
+             document.getElementById('5letra4').style.border = 'solid 3px green';
+
+         } else if (letra4 != letr4t5.value && letra1 == letr4t5.value || letra2 == letr4t5.value || letra3 == letr4t5.value || letra5 == letr4t5.value) {
+             
+             document.getElementById('5letra4').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('5letra4').style.border = 'solid 3px red';
+         }
+
+
+         if (letr5t5.value === "") {
+         
+         document.getElementById('5letra5').style.border = 'solid 3px black';
+
+      } else if (letra5 == letr5t5.value) {
+             
+             document.getElementById('5letra5').style.border = 'solid 3px green';
+
+         } else if (letra5 != letr5t5.value && letra1 == letr5t5.value || letra2 == letr5t5.value || letra3 == letr5t5.value || letra4 == letr5t5.value) {
+             
+             document.getElementById('5letra5').style.border = 'solid 3px orange';
+         } else {
+             document.getElementById('5letra5').style.border = 'solid 3px red'; 
+
+         }
+
+         
+
+
+        }
+         
+
+        
+
+
+    </script>
+    
+</body>
+</html>
