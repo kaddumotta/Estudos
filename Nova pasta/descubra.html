@@ -16,7 +16,7 @@
     }
 
 #principal {
-    width: 700px; 
+    width: 500px; 
     margin-left: auto;
     margin-right: auto;
    
@@ -32,7 +32,6 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     padding: 2px;
-    
     box-shadow: 5px 5px rgba(0, 0, 0, 0.226);
     border-radius: 15px;
     text-align: center;
@@ -41,7 +40,6 @@ h1 {
 
 #botao {
    margin-left: 48%;
-   margin-right: 50%;
    padding: 5px;
    color: rgb(15, 9, 9);
    background-color: rgba(128, 114, 114, 0.61);
@@ -197,12 +195,14 @@ input{
             } else if (letra1 == letr1t1.value) {
                 
                 document.getElementById('1letra1').style.border = 'solid 3px green ';
+                alert(`Parabéns, você acertou`)
 
             } else if (letra1 != letr1t1.value && letra2 == letr1t1.value || letra3 == letr1t1.value || letra4 == letr1t1.value || letra5 == letr1t1.value) {
                 
                 document.getElementById('1letra1').style.border = 'solid 3px orange';
             } else {
                 document.getElementById('1letra1').style.border = 'solid 3px red';
+                alert(`Ainda não foi dessa vez! Você tem mais 4 tentativas, boa sorte!!!`)
             }
 
         
@@ -267,6 +267,13 @@ input{
             } else {
                 document.getElementById('1letra5').style.border = 'solid 3px red';
             }
+
+
+            /*if (letra1 == letr1t1.value && letra2 == letr2t1.value && letra3 == letr3t1.value && letra4 == letr4t1 && letra5 == letr5t1.value) {
+                alert(`Parabéns, você acertou`)
+            } else {
+                alert(`Ainda não foi dessa vez! Você tem mais 4 tentativas, boa sorte!!!`)
+            } */
 
 
             /*2ª tentativa*/
@@ -352,6 +359,12 @@ input{
                 document.getElementById('2letra5').style.border = 'solid 3px red';
             }
 
+           /* if (letra1 == letr1t2.value && letra2 == letr2t2.value && letra3 == letr3t2.value && letra4 == letr4t2 && letra5 == letr5t2.value) {
+                alert(`Parabéns, você acertou`)
+            } else {
+                alert(`Ainda não foi dessa vez! Você tem mais 3 tentativas, boa sorte!!!`)
+            } */
+
 
             /*3ª TENTATIVA*/
             
@@ -433,6 +446,12 @@ input{
          } else {
              document.getElementById('3letra5').style.border = 'solid 3px red';
          }
+
+        /* if (letra1 == letr1t3.value && letra2 == letr2t3.value && letra3 == letr3t3.value && letra4 == letr4t3 && letra5 == letr5t3.value) {
+                alert(`Parabéns, você acertou`)
+            } else {
+                alert(`Ainda não foi dessa vez! Você tem mais 2 tentativas, boa sorte!!!`)
+            } */
 
 
 
@@ -517,8 +536,12 @@ input{
              document.getElementById('4letra5').style.border = 'solid 3px red';
          }
 
-
-        
+        /* if (letra1 == letr1t4.value && letra2 == letr2t4.value && letra3 == letr3t4.value && letra4 == letr4t4 && letra5 == letr5t4.value) {
+                alert(`Parabéns, você acertou`)
+            } else {
+                alert(`Ainda não foi dessa vez! Você tem mais 1 tentativa, boa sorte!!!`)
+            } */
+       
 
 
          /*5ª TENTATIVA*/
@@ -602,6 +625,12 @@ input{
              document.getElementById('5letra5').style.border = 'solid 3px red'; 
 
          }
+
+         /* if (letra1 == letr1t5.value && letra2 == letr2t5.value && letra3 == letr3t5.value && letra4 == letr4t5 && letra5 == letr5t5.value) {
+                alert(`Parabéns, você acertou`)
+            } else {
+                alert(`Que pena, não foi dessa vez!!! A palavra era: ${letra1}${letra2}${letra3}${letra4}${letra5}!!`)
+            } */
 
         }
          
