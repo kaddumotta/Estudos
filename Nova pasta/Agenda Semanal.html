@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Semanal</title>
+</head>
+
+<style>
+    body{
+        background: rgb(210, 233, 236);
+        font: normal 15pt Arial;
+    }
+
+    header{
+        color: white;
+        text-align: center;
+    }
+
+    section{
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+    }
+
+    footer{
+        color: white;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .topo-segunda, .topo-terça {
+        color: slategrey;
+    }
+
+    .Segunda, .Terça {
+        border: solid 1px gray;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .res-seg {
+        visibility: hidden ;
+    }
+
+    
+
+</style>
+
+<body>
+    <header>
+        <h1>Agenda Semanal</h1>
+    </header>
+
+    <section>
+       
+        <div class="Segunda">
+
+            <button onclick="aparece()" >+</button>
+            <button onclick="some()" >-</button>
+
+            <header class="topo-segunda">Segunda</header>
+
+            <div Class="res-seg">fsdfsdfsdfsdf <p>dsdasdasd</p></div>
+
+        </div>
+
+        <div Class="Terça">
+            
+            <button onclick="" >+</button>
+
+            <header class="topo-terça">Terça</header>
+
+            <div Class="res-ter"></div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Estudos</p>
+
+    </footer>
+
+    <script>
+  
+
+        
+
+        function aparece() {
+
+            
+                document.querySelector('div.res-seg').style.visibility = "visible";
+
+               
+          
+         
+    }
+
+    function some() {
+            
+            document.querySelector('div.res-seg').style.visibility = "hidden";
+                
+              
+             
+        }
+            
+    
+            
+            
+            
+            /*{
+
+            if (document.querySelector('div.res-seg').style.visibility = "visible") {
+            document.querySelector('div.res-seg').style.visibility = "hidden";
+            var visible = "não";
+        } else {
+            document.querySelector('div.res-seg').style.visibility = "visible";
+            var visible = "sim";
+        } */
+
+    
+
+    
+
+    
+    
+    
+    </script>
+    
+</body>
+</html>
