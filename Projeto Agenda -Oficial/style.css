@@ -25,16 +25,17 @@ section {
 }
 
 #res {
-    background-color: gray;
+    background-color: rgba(8, 88, 238, 0.349);
     border: none;
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.226);
 }
 
 
 
-input {
-    display: ;
-}
+
+
+
 
