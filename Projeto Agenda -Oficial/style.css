@@ -1,0 +1,39 @@
+
+
+
+div.geral {
+    background-color: gray;  
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+
+}
+
+div.inserir-compromisso {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+}
+
+section {
+    background-color:rgb(245, 240, 240);
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+#res {
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+button {
+    background-color: rgb(238, 229, 229);
+    border: none;
+}
+

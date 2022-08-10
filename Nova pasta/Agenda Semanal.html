@@ -45,6 +45,7 @@
 
     .res-seg {
         visibility: hidden ;
+        
     }
 
     
@@ -65,7 +66,7 @@
 
             <header class="topo-segunda">Segunda</header>
 
-            <div Class="res-seg">fsdfsdfsdfsdf <p>dsdasdasd</p></div>
+            <div Class="res-seg">dasd</div>
 
         </div>
 
@@ -89,13 +90,14 @@
     <script>
   
 
-        
+       
 
         function aparece() {
 
-            
-                document.querySelector('div.res-seg').style.visibility = "visible";
+            var text = document.getElementsByClassName('res-seg');
 
+                document.querySelector('div.res-seg').style.visibility = "visible";            
+                
                
           
          
@@ -104,6 +106,7 @@
     function some() {
             
             document.querySelector('div.res-seg').style.visibility = "hidden";
+            
                 
               
              
