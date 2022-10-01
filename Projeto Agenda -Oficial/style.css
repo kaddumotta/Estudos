@@ -1,27 +1,30 @@
 
-
+body {
+    min-width: 20%;
+    max-width: 100%;
+}
 
 div.geral {
     background-color: gray;  
     border: none;
     border-radius: 10px;
-    width: 100%;
-
+    margin: auto;
+    
 }
 
 div.inserir-compromisso {
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin: 10px;
+    margin: auto;
 }
 
 section {
     background-color:rgb(245, 240, 240);
     border: none;
     border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
+    
 }
 
 #res {
@@ -31,6 +34,11 @@ section {
     margin: 20px;
     padding: 20px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.226);
+}
+
+input#data, button{
+    margin-top: 25px;
+    align-items: center;
 }
 
 
